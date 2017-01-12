@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Quotes.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace Quotes.Controllers
@@ -16,9 +18,13 @@ namespace Quotes.Controllers
         }
 
         // GET: api/QuoteExternal/5
-        public string Get(int id)
+        public Quote Get(int id)
         {
-            return "value";
+            //TODO Get data of page
+            string q_str = new FunctionsController().GetQuoteExternal(id);
+            Quote q = new Quote() { QuoteID = id, QuoteString = q_str};
+
+            return q;
         }
 
         // POST: api/QuoteExternal

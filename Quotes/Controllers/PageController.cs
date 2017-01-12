@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quotes.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,10 @@ namespace Quotes.Controllers
         // GET: Page
         public ActionResult Index()
         {
-            return View();
+            int id = new FunctionsController().RandomID();
+            Quote q = new QuoteExternalController().Get(id);
+
+            return View(q);
         }
     }
 }
