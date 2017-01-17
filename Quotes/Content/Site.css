@@ -4,7 +4,7 @@
 	}
 
 body {    
-    background: #2091e8;
+    background: #4CAF50;
     padding-top: 50px;
     /*padding-bottom: 20px;*/
 }
@@ -27,12 +27,12 @@ textarea {
 
 
 .navbar-inverse{
-    background-color: #FFFFFF !important;
-    border-color: #FFFFFF !important;
+    background-color: #ecf0f1 !important;
+    border-color: #ecf0f1 !important;
 }
 
 .navbar a {
-    color: #1f253d !important;
+    color: #7f8c8d !important;
     text-decoration: none;
     
 }
@@ -41,11 +41,18 @@ textarea {
     padding-bottom: 5px !important;
 }
 
-.navbar a:hover {
+/*.navbar a:hover {
     color: #1f253d !important;
     border-bottom: 5px solid #a9c32a;
+}*/
+
+.navbar-toggle{
+    background-color: #7f8c8d;
 }
 
+.navbar-inverse .navbar-toggle{
+    border-color: transparent;
+}
 
 /****************************************************************************************************************/
 
@@ -53,6 +60,7 @@ textarea {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    width: 74%;
     height: 90%;
 }
 
